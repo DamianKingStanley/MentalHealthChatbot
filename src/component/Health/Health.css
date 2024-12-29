@@ -1,0 +1,61 @@
+.HealthComponent {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.health {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(44, 62, 80, 0.8);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.healthw {
+  flex: 1;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.healthw p {
+  font-size: 20px;
+  color: #ecf0f1;
+  margin-bottom: 0;
+}
+
+.healthimg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.healthimg img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 980px) {
+  .health {
+    flex-direction: column;
+    text-align: center;
+  }
+  .healthw {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .healthimg img {
+    max-width: 80%;
+  }
+}

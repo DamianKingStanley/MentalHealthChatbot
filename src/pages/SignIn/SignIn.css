@@ -1,0 +1,189 @@
+/* SignIn.css */
+
+.SignInbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+.register {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.register h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#registerform {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#registerform div {
+    flex: 1 1 48%;
+    /* Ensures two fields per row */
+}
+
+#registerform div.full-width {
+    flex: 1 1 100%;
+}
+
+#registerform input,
+#gender,
+#faculty {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.SignInbody .password-toggle1 {
+    position: absolute;
+    right: 35%;
+    top: 95%;
+    cursor: pointer;
+    color: #6c5ce7;
+    transition: color 0.3s ease;
+    display: none;
+}
+
+.SignInbody .password-toggle2 {
+    position: absolute;
+    right: 35%;
+    top: 105%;
+    cursor: pointer;
+    color: #6c5ce7;
+    transition: color 0.3s ease;
+    display: none;
+}
+
+#passwordmatchAlert p {
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
+
+#submitbtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#submitbtn:hover {
+    background-color: #218838;
+}
+
+#already {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#already a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#already a:hover {
+    text-decoration: underline;
+}
+
+
+/* Loader */
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Success and error messages */
+
+.success-message,
+.error-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+@media screen and (max-width: 980px) {
+    .register {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+    }
+    .SignInbody .password-toggle1 {
+        position: absolute;
+        right: 15%;
+        top: 123%;
+        cursor: pointer;
+        color: #6c5ce7;
+        transition: color 0.3s ease;
+        display: none;
+    }
+    .SignInbody .password-toggle2 {
+        position: absolute;
+        right: 15%;
+        top: 137%;
+        cursor: pointer;
+        color: #6c5ce7;
+        transition: color 0.3s ease;
+        display: none;
+    }
+}

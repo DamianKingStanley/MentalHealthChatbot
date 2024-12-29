@@ -1,0 +1,133 @@
+.LogInbody {
+    padding-bottom: 100px;
+    background-image: url(../../assest/thera.jpg);
+    background-size: cover;
+    background-position: left;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+.Login {
+    margin-top: 50px;
+    padding: 50px 100px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.2);
+    /* background: #c2aed2; */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    max-width: fit-content;
+    padding: 50px;
+    /* border: 1px solid blue; */
+}
+
+.Login h1 {
+    font-family: sans-serif;
+    color: blue;
+    color: white;
+}
+
+.Login p {
+    font-size: 18px;
+    color: white;
+}
+
+#emailL,
+#passwordL {
+    width: 500px;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: none;
+    border: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+#emailL:hover,
+#passwordL:hover {
+    border: 3px solid;
+    border-color: #fff;
+    color: inherit;
+}
+
+#submitbtn {
+    width: 500px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#submitbtn:hover,
+#submitbtn::after {
+    background-color: #0b5ed7;
+}
+
+#Loginform a {
+    text-decoration: none;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#loading-message {
+    font-size: 20px;
+}
+
+.loginMessageDisplay {
+    color: red;
+    background-color: red;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+    .LogInbody {
+        background-position: right;
+        height: 100vh;
+    }
+    .Login {
+        padding: 20px 20px;
+        margin: 0px 20px;
+    }
+    .Login p {
+        font-size: 16px;
+    }
+    #emailL,
+    #passwordL {
+        width: 250px;
+        height: 40px;
+        padding-left: 10px;
+    }
+    #submitbtn {
+        width: 250px;
+        height: 40px;
+        font-size: 15px;
+    }
+    #googlebtn {
+        width: 250px;
+        height: 40px;
+    }
+}

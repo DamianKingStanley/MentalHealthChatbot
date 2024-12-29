@@ -1,0 +1,236 @@
+/* Overall Body Styling */
+
+.AssistantBotBody {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: #f0f2f5;
+  /* Light gray background similar to WhatsApp */
+}
+
+/* Navbar and Navibar Styling */
+
+.AssistantBotBody > nav {
+  width: 100%;
+}
+
+/* Header Section */
+
+.AssistantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0084ff;
+  /* Messenger blue color */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AssistantHeader h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.AssistantHeader p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Chat Container */
+
+.Assistant-chat {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual Chat Bubbles */
+
+.userinput,
+.assistantanswer {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin: 5px 0;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.userinput {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  color: #000;
+  border-top-right-radius: 0;
+}
+
+.assistantanswer {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #000;
+  border-top-left-radius: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatars */
+
+.user-message,
+.bot-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-message {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.userinput::after,
+.assistantanswer::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.userinput::after {
+  border: 10px solid transparent;
+  border-left: 10px solid #dcf8c6;
+  top: 0;
+  right: -10px;
+}
+
+.assistantanswer::after {
+  border: 10px solid transparent;
+  border-right: 10px solid #ffffff;
+  top: 0;
+  left: -10px;
+}
+
+.user-icon {
+  font-size: 36px;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.bot-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Loader Styling */
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.loader::after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #0084ff;
+  border-color: #0084ff transparent #0084ff transparent;
+  animation: loader-spin 1.2s linear infinite;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Input Section */
+
+#AssistantForm {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#AssistantForm input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#AssistantForm input:focus {
+  border-color: #0084ff;
+}
+
+#AssistantForm button {
+  background-color: #0084ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+#AssistantForm button:hover {
+  background-color: #006bbf;
+}
+
+/* Scrollbar Styling */
+
+.Assistant-chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Assistant-chat::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.Assistant-chat::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.Assistant-chat::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+@media screen and (max-width: 980px) {
+  .assistantanswer {
+    max-width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    position: relative;
+    word-wrap: break-word;
+  }
+  .user-message {
+    justify-content: flex-end;
+    text-align: left;
+  }
+}
